@@ -1,0 +1,9 @@
+<%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+<%- partial('_partial/portfolio', null, {cache: !config.relative_link}) %>
+<% 
+	if(theme.skillslider.enable) { %>
+		<%- partial('_partial/skills', {images: theme.skillslider.images}, {cache: !config.relative_link}) %>
+	<% }
+%>
+<%- partial('_partial/about', null, {cache: !config.relative_link}) %>
+<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>

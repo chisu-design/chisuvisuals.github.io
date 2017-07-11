@@ -1,0 +1,29 @@
+<!-- Skills -->
+<section id="skills">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">Skills</h2>
+            <hr class="small">
+            <div class="my-skills">
+                
+<% for(let i = 0, totalImage = images.length; i < totalImage; i++){ 
+		let {caption, imagepath} = images[i]; %>
+	<%- 
+`
+<div class="text-center">
+	<img src="${imagepath}" alt="" />
+	<h4><strong>${caption}</strong></h4>
+</div>
+` 
+	%>
+<% } %>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <!-- /.container -->
+</section>

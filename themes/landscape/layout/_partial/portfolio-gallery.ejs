@@ -1,0 +1,54 @@
+<% if(is_post()){ %>
+	<section>
+	    <div class="container">
+	    	<div class="row">
+	    		<div id="right-column" class="col-xs-12 col-md-8">
+			    	<% if(post.vimeogallery){ %>
+			    		<div id="video-gallery"> 
+			    		<% for(let i = 0, totalVideo = post.vimeogallery.length; i < totalVideo; i++){
+			    		%>
+					        <iframe src="<%= post.vimeogallery[i] %>" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					        <br/>
+				    	<%}%>
+				    	</div>
+		    		<%}%>
+			        <br>
+			        <br>
+					<% if(post.images){ %>
+						<div id="gallery" style="display:none;"> <%
+
+							for(let i = 0, totalImage = post.images.length; i < totalImage; i++){ 
+								let {src, description} = post.images[i];
+								%>
+								<img src="<%= src %>" 
+									 data-image="<%= src %>" 
+									 data-description="<%= description %>" 
+									 alt="<%= description %>" />
+							<% } %>
+
+						</div>
+					<% } %>
+			    </div>
+	    		<div id="right-column" class="col-xs-12 col-md-4">
+			    	<div id="description">
+			    		<h2><%- post.headertitle ? post.headertitle : post.caption %></h2>
+			    		<%- post.content %>
+			    		<% if(post.toolsUsed){%>
+				    		<p><strong>Tools used: </strong><%- post.toolsUsed.join(", ") %></p>
+			    		<%}%>
+			    	</div>
+			    	<div id="back-to-projects">
+	    		    	<a href="/#portfolio" class="btn btn-dark btn-md">
+					    	<span class="fa fa-chevron-left fa-fw"></span> BACK
+				    	</a>
+			    	</div>
+	    		</div>
+	    	</div>
+	    </div>
+	    <div id="push"></div>
+	</section>
+	<footer id="copy-right">
+    	<div class="text-muted text-center">Copyright &copy; ChiSuArt 2017</div>
+	</footer>
+<%}%>
+

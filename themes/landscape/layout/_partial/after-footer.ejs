@@ -1,0 +1,128 @@
+<%- 
+    js([
+        'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js',
+        'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
+        'https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js',
+        'https://rawgit.com/jlmakes/scrollreveal/master/dist/scrollreveal.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/js/unitegallery.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/themes/tiles/ug-theme-tiles.min.js'
+    ])
+
+%>
+
+<% if(is_home()){%>
+    <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+<%}%>
+
+<% if(is_post()){%>
+    <a id="to-top" href="#portfolio-gallery" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+<%}%>
+
+<script>
+$(document).ready(function() {
+
+    <% if(is_home()){%>
+        // Initialize and Configure Scroll Reveal Animation
+        window.sr = ScrollReveal();
+        sr.reveal('.my-skills', {
+            duration: 600,
+            scale: 0.3,
+            distance: '0px'
+        }, 300);
+        sr.reveal('.sr-icons', {
+            duration: 600,
+            scale: 0.3,
+            distance: '0px'
+        }, 400);
+
+        $('.my-skills').slick({
+            centerMode: true,
+            arrows: true,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    autoplaySpeed: 4000,
+                    centerMode: false,
+                }
+            }, {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    centerMode: false,
+                    dots: true
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    centerMode: false,
+                    dots: true
+                }
+            }]
+        });
+
+    <%}%>
+
+    <% if(is_post()){%>$("#gallery").unitegallery();<%}%>
+
+    // Scrolls to the selected menu item on the page
+    $('a[href*=\\#]:not([href=\\#],[data-toggle],[data-target],[data-slide])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+
+});
+
+// Closes the sidebar menu
+$("#menu-close").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+// Opens the sidebar menu
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+//#to-top button appears after scrolling
+var fixed = false;
+$(document).scroll(function() {
+    if ($(this).scrollTop() > 250) {
+        if (!fixed) {
+            fixed = true;
+            // $('#to-top').css({position:'fixed', display:'block'});
+            $('#to-top').show("slow", function() {
+                $('#to-top').css({
+                    position: 'fixed',
+                    display: 'block'
+                });
+            });
+        }
+    } else {
+        if (fixed) {
+            fixed = false;
+            $('#to-top').hide("slow", function() {
+                $('#to-top').css({
+                    display: 'none'
+                });
+            });
+        }
+    }
+});
+</script>

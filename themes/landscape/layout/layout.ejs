@@ -1,0 +1,7 @@
+<%- partial('_partial/head') %>
+<body id="<%= is_home() ? 'main':'portfolio-gallery' %>">
+  <%- partial('_partial/nav', null, {cache: !config.relative_link}) %>
+  <%- body %>
+  <%- partial('_partial/after-footer') %>
+</body>
+</html>

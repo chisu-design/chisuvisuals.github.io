@@ -1,0 +1,21 @@
+<!-- About -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center" style="color:azure">About</h2>
+            <hr class="small" style="border-color:azure">
+            <div class="col-lg-12 text-center">
+                <img id="portfolio-pic" class="img-circle" src="images/profile-pic.jpg" />
+                <br/>
+                <br/>
+                <p class="lead" style="color:azure;">Chi Su is a 3D / VR artist professional with extensive training in 3D animation, 2D digital painting, concept art, rigging, and shader development. She graduated from School of Visual Arts in New York in 2017. She is a quick learner, highly motivated, detail oriented, problem solver, and loves to take on challenges. In her spare time, she focuses on refining her skills as a 3D artist, keep up to date with the latest trends for Computer-Generated Imagery, and learning to code better.</p>
+                <br />
+                <% if(theme.resumelink){%>
+                    <a href="<%= url_for(theme.resumelink) %>" target="_blank" class="btn btn-dark btn-lg"><i class="fa fa-file"></i> Resume</a>
+                <%}%>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>

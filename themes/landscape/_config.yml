@@ -1,0 +1,38 @@
+# Header
+menu:
+  Home: "#top"
+  About: "#about"
+  Portfolio: "#portfolio"
+  Contact: "#contact"
+
+# Display the skill slider if skillslider is set true
+skillslider: 
+  enable: true
+  images:
+    - {"caption":"After Effects","imagepath":"/images/skills/after-effects.png"}
+    - {"caption":"Illustrator","imagepath":"/images/skills/illustrator.png"}
+    - {"caption":"Maya","imagepath":"/images/skills/maya.png"}
+    - {"caption":"Modo","imagepath":"/images/skills/modo.png"}
+    - {"caption":"Photoshop","imagepath":"/images/skills/photoshop.png"}
+    - {"caption":"Speedtree","imagepath":"/images/skills/speedtree.png"}
+    - {"caption":"Substance Designer","imagepath":"/images/skills/substance-designer.png"}
+    - {"caption":"Substance Painter","imagepath":"/images/skills/substance-painter.png"}
+    - {"caption":"Unity","imagepath":"/images/skills/Unity.png"}
+    - {"caption":"Unreal","imagepath":"/images/skills/unreal.png"}
+    - {"caption":"Zbrush","imagepath":"/images/skills/zbrush.png"}
+
+landingphoto:
+
+#use cloud storage for this
+resumelink: Resume_ChiSu.pdf
+
+#to show more description when image is hover
+coverInfoEnable: false
+
+# Miscellaneous
+google_analytics:
+favicon:
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:
