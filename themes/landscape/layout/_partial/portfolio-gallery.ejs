@@ -5,11 +5,12 @@
 	    		<div id="right-column" class="col-xs-12 col-md-8">
 			    	<% if(post.vimeogallery){ %>
 			    		<div id="video-gallery"> 
-			    		<% for(let i = 0, totalVideo = post.vimeogallery.length; i < totalVideo; i++){
-			    		%>
-					        <iframe src="<%= post.vimeogallery[i] %>" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			    		<% if(post.vimeogallery.length > 1){ %>
+			    			<%- partial('../_widget/carousel',{videos: post.vimeogallery}) %>
+			    		<% } else { %>
+					        <iframe src="<%= post.vimeogallery[0] %>" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					        <br/>
-				    	<%}%>
+		    			<% } %>
 				    	</div>
 		    		<%}%>
 			        <br>

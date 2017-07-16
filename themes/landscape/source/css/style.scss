@@ -304,4 +304,23 @@ hr {
     }
 }
 
+.carousel-indicators {
+    bottom: -38px;
+    .active {
+        background: #046380;
+    }
+    li {
+        border: solid 1px #046380;
+    }
+}
+
+.carousel-control {
+    top: 367px;
+    color: #046380;
+    opacity: 1;
+    &:hover, &:focus {
+        color: #046380;
+    }
+}
+
 @import "_responsive";
