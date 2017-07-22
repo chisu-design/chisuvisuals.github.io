@@ -68,7 +68,7 @@ vimeogallery:
 - 'https://player.vimeo.com/video/225598510'
 
 ---
-Continuum is a Virtual Reality exploration game.
+Continuum is a Virtual Reality exploration game. It was selected for SVA Premieres festival and showcased at Linwood Dunn Theatre at the Academy of Motion Picture Arts & Sciences in LA and SVA Chelsea Gallery in NY.
 
 The game is deveoped for HTC Vive using Unreal Engine.
 
