@@ -50,6 +50,7 @@ images:
   description: 'Blueprint in UE4 - pick up an object using HTC Vive'
 categories:
   - gallery
+  - 3D
 date: 2017-07-04 10:38:24
 toolsUsed:
 - Unreal Engine

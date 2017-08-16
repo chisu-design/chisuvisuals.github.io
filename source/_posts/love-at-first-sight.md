@@ -18,6 +18,7 @@ images:
   description: 'Seahorse'
 categories:
   - gallery
+  - 3D
 date: 2017-07-04 10:41:09
 toolsUsed:
 - Maya

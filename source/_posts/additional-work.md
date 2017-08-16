@@ -22,9 +22,12 @@ images:
   description: 'Metal foundation and wall'
 - src: '/images/galleries/additional/metal_02.jpg'
   description: 'Metal stairs and pillar'
+- src: '/images/galleries/additional/gredare.jpg'
+  description: 'Gredare - wireframe, beauty, and AO'
 categories:
   - gallery
-date: 2017-07-04 10:41:22
+  - 3D 
+date: 2017-07-04 10:40:45
 toolsUsed:
 - Maya
 - Modo

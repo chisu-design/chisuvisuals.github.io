@@ -34,6 +34,7 @@ images:
   description: 'Magnetic field'
 categories:
   - gallery
+  - 3D
 date: 2017-07-04 10:41:01
 toolsUsed:
 - Unreal Engine 4

@@ -22,6 +22,7 @@ images:
   description: '3D Medical Illustration'
 categories:
   - gallery
+  - 3D
 date: 2017-07-04 10:41:30
 toolsUsed:
 - Modo

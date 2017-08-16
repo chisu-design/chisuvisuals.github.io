@@ -1,8 +1,12 @@
 <%
     let chunked = [];
 
-    site.categories.findOne({name:"gallery"}).posts.each((post)=>{
+    let gallery = site.categories.findOne({name:"3D"}).posts.toArray();
+    console.log(gallery.length)
+    
+    _.orderBy(gallery,'date','asc').map((post)=>{
         let {coverImage, coverDescription, path, date, caption,videolink} = post;
+
         chunked.push({coverImage, coverDescription, path, date, caption, videolink});
     });
 

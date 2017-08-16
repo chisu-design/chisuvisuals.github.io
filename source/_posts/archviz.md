@@ -21,7 +21,8 @@ images:
   description: 'Wireframe'
 categories:
   - gallery
-date: 2017-07-20 08:07:28
+  - 3D
+date: 2017-07-04 10:38:25
 tags:
 headertitle: Architectural Visualization
 coverDescription:

@@ -38,7 +38,8 @@ images:
   description: ''
 categories:
   - gallery
-date: 2017-07-04 10:41:42
+  - 3D
+date: 2017-07-31 10:41:42
 toolsUsed:
 - Photoshop
 - Acrylic
