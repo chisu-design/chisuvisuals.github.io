@@ -71,7 +71,11 @@ $(document).ready(function() {
 
     <%}%>
 
-    <% if(is_post()){%>$("#gallery").unitegallery();<%}%>
+    <% if(is_post()){
+        if(page.categories.find({name:'3D'}).length){%>
+            $("#gallery").unitegallery();
+        <%}
+    }%>
 
     // Scrolls to the selected menu item on the page
     $('a[href*=\\#]:not([href=\\#],[data-toggle],[data-target],[data-slide])').click(function() {

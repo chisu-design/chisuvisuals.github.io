@@ -20,7 +20,6 @@ images:
 - src: '/images/galleries/archviz/archViz_wire03.jpg'
   description: 'Wireframe'
 categories:
-  - gallery
   - 3D
 date: 2017-07-04 10:38:25
 tags:

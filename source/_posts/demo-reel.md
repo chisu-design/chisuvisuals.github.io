@@ -11,7 +11,6 @@ images:
   - src: 'http://via.placeholder.com/458x257'
     description: ''
 categories:
-  - gallery
   - 3D
 date: 2017-07-03 10:33:23
 toolsUsed:

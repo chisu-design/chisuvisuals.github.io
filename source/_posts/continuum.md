@@ -44,12 +44,9 @@ images:
   description: 'Blueprint in UE4 - pick up an animated character using HTC Vive'
 - src: '/images/galleries/continuum/panner.jpg'
   description: 'Blueprint in UE4 - panner material effect and development'
-- src: '/images/galleries/continuum/pawn.jpg'
-  description: 'Blueprint in UE4 - moving pawn in VR Environment'
 - src: '/images/galleries/continuum/pickup.jpg'
   description: 'Blueprint in UE4 - pick up an object using HTC Vive'
 categories:
-  - gallery
   - 3D
 date: 2017-07-04 10:38:24
 toolsUsed:
@@ -67,7 +64,6 @@ videolink:
 vimeogallery:
 - 'https://player.vimeo.com/video/217920440'
 - 'https://player.vimeo.com/video/225598510'
-
 ---
 Continuum is a Virtual Reality exploration game. It was selected for SVA Premieres festival and showcased at Linwood Dunn Theatre at the Academy of Motion Picture Arts & Sciences in LA and SVA Chelsea Gallery in NY.
 

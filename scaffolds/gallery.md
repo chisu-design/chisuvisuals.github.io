@@ -16,6 +16,5 @@ images:
  - {"src":"http://via.placeholder.com/458x257","description":""}
 toolsUsed:
 categories:
-- gallery
 ---
 Enter your project description here

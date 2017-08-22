@@ -21,7 +21,6 @@ images:
 - src: '/images/galleries/medical/med8.png'
   description: '3D Medical Illustration'
 categories:
-  - gallery
   - 3D
 date: 2017-07-04 10:41:30
 toolsUsed:
@@ -29,7 +28,6 @@ toolsUsed:
 - Maya
 - Photoshop
 - After Effects
-- 
 tags:
 headertitle:
 videolink:

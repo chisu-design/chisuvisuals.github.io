@@ -33,7 +33,6 @@ images:
 - src: '/images/galleries/sci-fi/scifi_14.jpg'
   description: 'Magnetic field'
 categories:
-  - gallery
   - 3D
 date: 2017-07-04 10:41:01
 toolsUsed:

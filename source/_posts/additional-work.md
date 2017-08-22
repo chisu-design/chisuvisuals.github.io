@@ -25,7 +25,6 @@ images:
 - src: '/images/galleries/additional/gredare.jpg'
   description: 'Gredare - wireframe, beauty, and AO'
 categories:
-  - gallery
   - 3D 
 date: 2017-07-04 10:40:45
 toolsUsed:

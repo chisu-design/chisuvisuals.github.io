@@ -2,7 +2,11 @@
 menu:
   Home: "#top"
   About: "#about"
-  Portfolio: "#portfolio"
+  Portfolio: 
+    - MenuName: "UXUI"
+      ID: "#uiux"
+    - MenuName: "3D"
+      ID: "#3d"
   Contact: "#contact"
 
 # Display the skill slider if skillslider is set true

@@ -23,7 +23,6 @@ images:
 - src: '/images/galleries/openWorld/openWorld9.jpg'
   description: '3D Assets'
 categories:
-  - gallery
   - 3D
 date: 2017-07-04 10:40:46
 toolsUsed:

@@ -8,11 +8,16 @@
 /* Global Styles */
 
 @import "_partials/portfolio-gallery";
+@import "_partials/uxui";
 @import "_partials/slick-custom";
 html,
 body {
     width: 100%;
     height: 100%;
+}
+
+.submenu {
+    margin-left: 15px;
 }
 
 .text-vertical-center {

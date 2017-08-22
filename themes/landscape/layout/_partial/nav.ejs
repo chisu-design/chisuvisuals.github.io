@@ -3,10 +3,28 @@
 <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-        <% for (var i in theme.menu){ %>
-          <li>
-            <a href="/<%- theme.menu[i] %>" onclick=$("#menu-close").click();> <%= i %></a>
-          </li>
-        <% } %>
+        <% for (let i in theme.menu){
+            let dataType = typeof theme.menu[i];
+            if(dataType === "object"){ %>
+                <li>
+                    <a href="/#<%- i.toLowerCase() %>" onclick=$("#menu-close").click();>
+                        <%= i %>
+                    </a>
+                </li>
+                <% for(let project of theme.menu[i]){ %>
+                    <li class="submenu">
+                        <a href="/<%- project.ID %>" onclick=$("#menu-close").click();><%= project.MenuName %></a>
+                    </li>
+                <%}
+            }
+
+            if(dataType === "string"){ %>
+              <li>
+                <a href="/<%- theme.menu[i] %>" onclick=$("#menu-close").click();> <%= i %></a>
+              </li>
+            <%}
+
+            
+          } %>
     </ul>
 </nav>

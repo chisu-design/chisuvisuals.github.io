@@ -37,7 +37,6 @@ images:
 - src: '/images/galleries/illustration/7.jpg'
   description: ''
 categories:
-  - gallery
   - 3D
 date: 2017-07-31 10:41:42
 toolsUsed:

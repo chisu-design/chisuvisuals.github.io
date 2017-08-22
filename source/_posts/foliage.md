@@ -21,7 +21,6 @@ images:
 - src: '/images/galleries/foliage/foliage_09.jpg'
   description: 'Tree'
 categories:
-  - gallery
   - 3D
 date: 2017-07-04 10:40:55
 toolsUsed:

@@ -1,0 +1,66 @@
+<%
+    let chunked = [];
+    let gallery;
+
+    let siteCategories =  site.categories.findOne({name:category});
+
+    if(siteCategories){
+
+        gallery = site.categories.findOne({ name : category }).posts.toArray();
+        
+        _.orderBy(gallery,'date','asc').map((post)=>{
+            let {coverImage, coverDescription, path, date, caption,videolink} = post;
+
+            chunked.push({coverImage, coverDescription, path, date, caption, videolink});
+        });
+
+        chunked = _.chunk(chunked, 2); 
+
+        if(gallery.length > 0) { %>
+            <div class="container" id="<%- category.toLowerCase() %>">
+                <div class="row">
+                    <div class="text-center">
+                        <h2><%= section_title %></h2>
+                        <hr class="small">
+                    <% for(let i = 0, chunkedTotal = chunked.length; i < chunkedTotal; i++){ %>
+                        <div class="row">
+                        <% for(let j = 0, itemTotal = chunked[i].length; j < itemTotal; j++){ 
+                            let {coverImage, coverDescription, path, date, caption, videolink} = chunked[i][j]; %>
+                            <div class="col-md-6">
+                                <div class="portfolio-item">
+                                    <div class="ih-item square effect6 from_top_and_bottom">
+                                        <a>
+                                            <div class="img">
+                                                <img src="<%= coverImage %>" alt="img">
+                                            </div>
+                                            <div class="info">
+                                                <h3><%= caption ? caption : "" %></h3>
+                                                <p class="block-with-text">
+                                                    <% if(theme.coverInfoEnable){ %>
+                                                        <%= coverDescription %>
+                                                    <%}%>
+                                                </p>
+                                                <% if(videolink){ %>
+                                                    <div onClick="window.open('<%= videolink %>')" class="btn btn-primary btn-lg">Watch</div>
+                                                <% } else { %>
+                                                    <div onClick="window.location.href = '<%- url_for(path) %>'" class="btn btn-primary btn-lg">
+                                                    <%= button_name %>
+                                                    </div>
+                                                <% } %>
+                                            </div>
+                                        </a>
+                                    </div>
+                                 
+                                </div>
+                            </div>
+                        <%}%>
+                        </div>
+                    <%} %>
+                    </div>
+                </div>
+            </div>
+        <% } 
+
+    }
+
+%>

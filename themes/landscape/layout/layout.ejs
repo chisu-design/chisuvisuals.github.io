@@ -1,6 +1,19 @@
+<% 
+	let pageID;
+	if(is_home()){
+		pageID = 'main';
+	} else {
+		if(page.categories.find({name:'UIUX'}).length){
+			pageID = 'uiux';
+		} else {
+			pageID = 'portfolio-gallery';
+		}
+	}
+
+%>
 <%- partial('_partial/head') %>
-<body id="<%= is_home() ? 'main':'portfolio-gallery' %>">
-  <%- partial('_partial/nav', null, {cache: !config.relative_link}) %>
+<body id="<%= pageID %>">
+  <%- partial('_partial/nav') %>
   <%- body %>
   <%- partial('_partial/after-footer') %>
 </body>
