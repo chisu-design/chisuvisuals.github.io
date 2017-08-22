@@ -3,10 +3,12 @@
 	if(is_home()){
 		pageID = 'main';
 	} else {
-		if(page.categories.find({name:'UIUX'}).length){
-			pageID = 'uiux';
-		} else {
-			pageID = 'portfolio-gallery';
+		if(page.categories){
+			if(page.categories.find({name:'UIUX'}).length){
+				pageID = 'uiux';
+			} else {
+				pageID = 'portfolio-gallery';
+			}
 		}
 	}
 

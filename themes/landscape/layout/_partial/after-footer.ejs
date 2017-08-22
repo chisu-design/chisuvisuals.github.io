@@ -10,16 +10,17 @@
 
 %>
 
-<% if(is_home()){%>
-    <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-<%}%>
-
-<% if(is_post()){%>
-    <a id="to-top" href="#portfolio-gallery" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-<%}%>
+    <a id="to-top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
 
 <script>
 $(document).ready(function() {
+
+    $("#to-top").click(function(event){
+        $('html,body').animate({
+            scrollTop: 0
+        }, 1000);
+        
+    })
 
     <% if(is_home()){%>
         // Initialize and Configure Scroll Reveal Animation
@@ -107,6 +108,7 @@ $("#menu-toggle").click(function(e) {
 //#to-top button appears after scrolling
 var fixed = false;
 $(document).scroll(function() {
+
     if ($(this).scrollTop() > 250) {
         if (!fixed) {
             fixed = true;
@@ -128,5 +130,7 @@ $(document).scroll(function() {
             });
         }
     }
+
+
 });
 </script>
