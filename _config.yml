@@ -4,7 +4,7 @@
 
 # Site
 title: Chi Su - 3D Artist
-subtitle: https://chisuart.github.io/
+subtitle: https://chisuvisuals.github.io/
 description: My website portfolio
 author: Chi Su
 language: En
@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://chisuart.github.io
+url: https://chisuvisuals.github.io
 root: /
 permalink: :category/:title/
 permalink_defaults:
@@ -69,6 +69,6 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/chisuart/chisuart.github.io.git
+  repo: https://github.com/chisuvisuals/chisuvisuals.github.io.git
   branch: master
   message: "Website Update {{now('YYYY-MM-DD HH:mm:ss')}}"
